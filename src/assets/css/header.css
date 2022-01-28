@@ -32,11 +32,13 @@ header {
     border-bottom: 4px solid #FF6500;
 
 }
-
+.menu ul{
+    display: flex;
+    flex-direction: row;
+}
 .menu ul li {
     list-style: none;
     margin: auto 10px;
-    float: right;
 }
 
 .user-settings {
