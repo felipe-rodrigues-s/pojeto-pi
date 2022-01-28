@@ -1,0 +1,58 @@
+header {
+    width: 100%;
+    background-color: #1D428A;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 150px;
+    height: 35px;
+    background-color: #FF6500;
+    margin: auto 10px;
+    border-radius: 10%;
+}
+
+.menu {
+    display: flex;
+    margin: auto;
+}
+
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 5px;
+    transition: 0.5s;
+}
+
+.menu ul li a:hover {
+
+    border-bottom: 4px solid #FF6500;
+
+}
+
+.menu ul li {
+    list-style: none;
+    margin: auto 10px;
+    float: right;
+}
+
+.user-settings {
+    display: flex;
+    justify-content: space-between;
+    margin: auto 2px;
+}
+
+.user-settings a i {
+    color: #fff;
+    margin: 0 10px;
+}
+
+.user-settings input {
+    border-radius: 10px;
+    color: #C4C4C4;
+    font-size: 1em;
+}
+
