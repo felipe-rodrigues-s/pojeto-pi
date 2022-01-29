@@ -1,0 +1,55 @@
+.valor h2, .frete h2{
+  font-size: 16px;
+  color: var(--gray);
+}
+
+.valoreFrete{
+  width: 18%;
+  height: 400px;
+  margin: 10px auto;
+  box-shadow: var(--shadow);
+}
+
+.detalheValor{
+  margin: 20px;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.preco{
+  color: var(--orange);
+}
+
+.atualPreco{
+  color:  var(--green);
+}
+
+
+.cep{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.cep input{
+  border:  var(--green) solid 1px;
+  width: 70%;
+  font-size: 20px;
+}
+
+.cep button{
+  border:  var(--green) solid 1px;
+  background-color:  var(--verde);
+  color: var( --White) ;
+  cursor: pointer;
+  width: 25%;
+}
+
+.cep button:hover{
+  border: var(--orange) solid 1px;
+}
+.cep input:hover{
+  border: var(--orange) solid 1px;
+}
+

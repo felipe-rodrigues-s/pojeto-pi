@@ -1,0 +1,39 @@
+@import url(/src/assets/css/cores.css);
+
+.secaoProduto{
+  width: 99%;
+  margin: auto;
+}
+.produto{
+  display:flex;
+  width: 100%;
+  justify-content:space-evenly;
+  box-shadow: var(--shadow);
+}
+.detalhes{
+  display: flex;
+  width: 60%;
+  margin: 15px auto;
+  justify-content: space-between;
+}
+.imagenProduto{
+  width: 50%;
+  text-align: center;
+}
+
+.imagenProduto img{
+  width: 290px;
+  padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
