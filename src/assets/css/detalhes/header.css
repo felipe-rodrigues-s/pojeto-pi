@@ -1,0 +1,26 @@
+.header{
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 5px 20px;
+  align-items: center;
+  background-color: rgb(29,66,138);
+ }
+ 
+ .menu{
+   display: flex;
+   flex-wrap: wrap;
+ }
+ 
+ .menu li{
+   margin-left: 10px;
+   padding: 10px;
+   max-width: 900px;
+ }
+ .menu input{
+   margin-left: 10px;
+   border-radius: 15px;
+   padding: 3px;
+   width: 25vw;
+   min-width: 150px;
+ }
