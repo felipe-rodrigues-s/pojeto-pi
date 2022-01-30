@@ -4,53 +4,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
   <title>Projeto PI</title>
+
   <link rel="stylesheet" href="assets/css/all.css">
+
 </head>
 
 <body>
   <!-- Start header -->
-  <header>
-    <span class="logo">
-      <img src="" alt="">
-    </span>
-    <nav class="menu">
-      <ul>
-        <li><a href="">Início</a></li>
-        <li><a href="">Todos Produtos</a></li>
-        <li><a href="">Mouse</a></li>
-        <li><a href="">Teclado</a></li>
-        <li><a href="">Teclado</a></li>
-        <li><a href="">Acessórios</a></li>
+  <header class="header">
+    <div class="logo">
+      <a href="./index.html">Logo</a>
+    </div>
+    <nav class="bar">
+      <ul class="menu">
+        <li><a href="produtos.html">Todos os Produtos</a></li>
+        <li><a href="mouses.html">Mouses</a></li>
+        <li><a href="teclados.html">Teclado</a></li>
+        <li><a href="acessorios.html">Acessórios</a></li>
       </ul>
+      <div class="busca">
+        <input type="text" placeholder="Busque aqui" />
+      </div>
+      <div class="login">
+        <a href="#"><img src="/src/assets/img/iconuser.svg" alt="login"></a>
+        <a href="#"><img src="/src/assets/img/carinho.svg" alt="carrinho de compras"></a>
     </nav>
-    <span class="user-settings">
-      <form action="">
-        <input type="search" name="search" id="" placeholder="Pesquise aqui">
-      </form>
-      <a href=""><i class="fas fa-user"></i></a>
-      <a href=""><i class="fas fa-shopping-bag"></i></a>
-    </span>
   </header>
+  <div>
+    <div class="conteinerSlider">
+      <div id="slider">
+        <div id="items">
+          <div class="item"><img src="/src/assets/img/krom_klaim_banner_home-905pc8tgrg.jpg" alt="baner"></div>
+          <div class="item"><img src="/src/assets/img/BANNER_HOME_STORE_krom_KAM.jpg" alt="baner"></div>
+          <div class="item"><img src="/src/assets/img/krom_klaim_banner_home-905pc8tgrg.jpg" alt="baner"></div>
+          <div class="item"><img src="/src/assets/img/BANNER_HOME_STORE_krom_KAM.jpg" alt="baner"></div>
+          <div class="item"><img src="/src/assets/img/krom_klaim_banner_home-905pc8tgrg.jpg" alt="baner"></div>
+          <div class="item"><img src="/src/assets/img/BANNER_HOME_STORE_krom_KAM.jpg" alt="baner"></div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- end header -->
 
   <!-- start main  -->
   <main>
-    <!-- start silder show -->
-    <section class="silder">
-      <img src="assets/img/slide-2.jpg" alt="">
-      <div class="text">
-        <h1>Mega oferta</h1>
-        <p>fone gammer onikuma x11 orelhas de removíveis</p>
-        <h1>R$ 209,99</h1>
-      </div>
-    </section>
-    <!-- end slider show -->
     <section class="cards-content">
       <a href="/src/teclado.html">
         <div class="card-item">
@@ -121,35 +122,39 @@
         </span>
       </div>
     </section>
-
   </main>
   <!-- end main -->
 
   <!-- Start Ƒooter -->
   <footer>
-    <div class="contact">
-      <h3>Antendimento</h3>
-      <ul>
-        <li><a href=""><i class="fab fa-whatsapp"></i> (00) 9 0000-0000</a></li>
-        <li><a href=""><i class="fas fa-at"></i> email.com</a></li>
-      </ul>
-    </div>
-    <div class="aditional">
-      <div class="aditional-card">
-        <h3>ACEITAMOS</h3>
-        <div class="aditional-card-content">
-
+    <div class="rodape">
+      <div class="contato">
+        <h2>ATENDIMENTO</h2>
+        <div class="imgcontato"><img src="/src/assets/img/telefone-com-fio 1.svg" alt="numero de contato">
+          <p>(00)9 0000-0000</p>
+        </div>
+        <div class="imgcontato"><img src="/src/assets/img/o-email-1.svg" alt="numero de contato">
+          <p>faleconosco@sac.com.br</p>
         </div>
       </div>
-
-      <div class="aditional-card">
-        <h3>SEGURANÇA</h3>
-        <div class="aditional-card-content">
-
+      <div class="meiodepagamento">
+        <h2>ACEITAMOS</h2>
+        <div class="bandeiras">
+          <img src="/src/assets/img/meiosdepagamento-removebg-preview.png" alt="meios de pagamento">
+        </div>
+        <p>Copyright &copy; 2022</p>
+      </div>
+      <div class="midia">
+        <h2>REDES SOCIAIS</h2>
+        <div class="imgmidia">
+          <div><img src="/src/assets/img/facebook.svg" alt="facebook"></div>
+          <div><img src="/src/assets/img/instagram.svg" alt="facebook"></div>
+          <div><img src="/src/assets/img/Vector.svg" alt="facebook"></div>
         </div>
       </div>
     </div>
   </footer>
+  <script src="/script/banner.js"></script>
   <!-- End Footer -->
 </body>
 
