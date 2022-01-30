@@ -40,8 +40,8 @@
 
 .cep button{
   border:  var(--green) solid 1px;
-  background-color:  var(--verde);
-  color: var( --White) ;
+  background-color:  var(--green);
+  color: var(--White) ;
   cursor: pointer;
   width: 25%;
 }

@@ -1,3 +1,8 @@
+.conteinerSlider{
+  width: 100%;
+  background-color: var(--gray-claro);
+  box-shadow: var(--shadow);
+}
 #slider {
   display: flex; 
   width: 95vw;

@@ -4,7 +4,7 @@
   justify-content: space-around;
   padding: 5px 20px;
   align-items: center;
-  background-color: rgb(29,66,138);
+  background-color: var(--blue);
  }
  .logo{
   width: 5%;
