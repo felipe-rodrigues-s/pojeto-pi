@@ -1,34 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/src/assets/css/detalhes/reset.css">
-  <link rel="stylesheet" href="/src/assets/css/bady.css">
+  <link rel="stylesheet" href="/src/assets/css/detalhes/header.css">
+
+  <link rel="stylesheet" href="/src/assets/css/banner.css">
+
+  
   <link rel="stylesheet" href="/src/assets/css/sugeridos.css">
   <link rel="stylesheet" href="/src/assets/css/card.css">
   <link rel="stylesheet" href="/src/assets/css/button.css">
   <link rel="stylesheet" href="/src/assets/css/valorfrete.css">
   <link rel="stylesheet" href="/src/assets/css/discricao.css">
   <link rel="stylesheet" href="/src/assets/css/secaoproduto.css">
-  <link rel="stylesheet" href="/src/assets/css/detalhes/header.css">
+
 
   <title>Projeto PI</title>
 </head>
+
 <body>
-    <header class="header">
+  <header class="header">
+    <div class="logo">
       <a href="./index.html">Logo</a>
-      <nav>      
-        <ul class="menu">
-          <li><a href="produtos.html">Todos os Produtos</a></li>
-          <li><a href="mouses.html">Mouses</a></li>
-          <li><a href="teclados.html">Teclado</a></li>
-          <li><a href="acessorios.html">Acessórios</a></li>
-          <input type="text" placeholder="Busque aqui" />
-        </ul>
-      </nav>
-    </header>
+    </div>
+    <nav class="bar">
+      <ul class="menu">
+        <li><a href="produtos.html">Todos os Produtos</a></li>
+        <li><a href="mouses.html">Mouses</a></li>
+        <li><a href="teclados.html">Teclado</a></li>
+        <li><a href="acessorios.html">Acessórios</a></li>
+      </ul>
+      <div class="busca">
+        <input type="text" placeholder="Busque aqui" />
+      </div>
+      <div class="login">
+        <a href="#"><img src="/src/assets/img/iconuser.svg" alt="login"></a>
+        <a href="#"><img src="/src/assets/img/carinho.svg" alt="carrinho de compras"></a>
+    </nav>
+  </header>
+  <div id="slider">
+    <div id="items">
+      <div class="item"><img src="/src/assets/img/krom_klaim_banner_home-905pc8tgrg.jpg" alt="baner"></div>
+      <div class="item"><img src="/src/assets/img/BANNER_HOME_STORE_krom_KAM.jpg" alt="baner"></div>
+      <div class="item"><img src="/src/assets/img/krom_klaim_banner_home-905pc8tgrg.jpg" alt="baner"></div>
+      <div class="item"><img src="/src/assets/img/BANNER_HOME_STORE_krom_KAM.jpg" alt="baner"></div>
+       <div class="item"><img src="/src/assets/img/krom_klaim_banner_home-905pc8tgrg.jpg" alt="baner"></div>
+      <div class="item"><img src="/src/assets/img/BANNER_HOME_STORE_krom_KAM.jpg" alt="baner"></div>
+    </div>
+  </div>
   <main class="secaoProduto">
     <section class="produto">
       <article class="detalhes">
@@ -38,12 +61,14 @@
         <div class="description">
           <h2>Teclado Mecanico Gamer</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam nisi vel officiis perspiciatis laborum odio suscipit quis doloremque. Tempore cum similique corporis assumenda eaque nulla quis sunt aspernatur facilis ad.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam nisi vel officiis perspiciatis laborum odio
+            suscipit quis doloremque. Tempore cum similique corporis assumenda eaque nulla quis sunt aspernatur facilis
+            ad.
           </p>
         </div>
       </article>
       <article class="valoreFrete">
-        <div class="detalheValor"> 
+        <div class="detalheValor">
           <div class="valor">
             <h2>Super desconto</h2>
             <p class="preco"><i>R$ 339,99</i> 12%</p>
@@ -53,7 +78,7 @@
           <div class="frete">
             <h2>Calcular frete e prazo</h2>
             <div class="cep">
-              <input type="text" name="cep" id="cep"> 
+              <input type="text" name="cep" id="cep">
               <button>ok</button>
             </div>
           </div>
@@ -62,63 +87,65 @@
       </article>
     </section>
     <section class="sugeridos">
-        <div class="card">
-          <div class="produtoCard">
-            <div>
-              <img src="/src/assets/img/produto-2.png" alt="" srcset="">
-            </div>
-  
-            <div>
-              <h2>Mochila notebook</h2>
-              <p>R$ 2.599,00</p>
-              <p>12x R$ 216,66</p>
-            </div>
+      <div class="card">
+        <div class="produtoCard">
+          <div>
+            <img src="/src/assets/img/produto-2.png" alt="" srcset="">
+          </div>
+
+          <div>
+            <h2>Mochila notebook</h2>
+            <p>R$ 2.599,00</p>
+            <p>12x R$ 216,66</p>
           </div>
         </div>
-        <div class="card">
-          <div class="produtoCard">
-            <div>
-              <img src="/src/assets/img/produto-2.png" alt="" srcset="">
-            </div>
-  
-            <div>
-              <h2>Mochila notebook</h2>
-              <p>R$ 2.599,00</p>
-              <p>12x R$ 216,66</p>
-            </div>
+      </div>
+      <div class="card">
+        <div class="produtoCard">
+          <div>
+            <img src="/src/assets/img/produto-2.png" alt="" srcset="">
+          </div>
+
+          <div>
+            <h2>Mochila notebook</h2>
+            <p>R$ 2.599,00</p>
+            <p>12x R$ 216,66</p>
           </div>
         </div>
-        <div class="card">
-          <div class="produtoCard">
-            <div>
-              <img src="/src/assets/img/produto-2.png" alt="" srcset="">
-            </div>
-  
-            <div>
-              <h2>Mochila notebook</h2>
-              <p>R$ 2.599,00</p>
-              <p>12x R$ 216,66</p>
-            </div>
+      </div>
+      <div class="card">
+        <div class="produtoCard">
+          <div>
+            <img src="/src/assets/img/produto-2.png" alt="" srcset="">
+          </div>
+
+          <div>
+            <h2>Mochila notebook</h2>
+            <p>R$ 2.599,00</p>
+            <p>12x R$ 216,66</p>
           </div>
         </div>
-        <div class="card">
-          <div class="produtoCard">
-            <div>
-              <img src="/src/assets/img/produto-2.png" alt="" srcset="">
-            </div>
-  
-            <div>
-              <h2>Mochila notebook</h2>
-              <p>R$ 2.599,00</p>
-              <p>12x R$ 216,66</p>
-            </div>
+      </div>
+      <div class="card">
+        <div class="produtoCard">
+          <div>
+            <img src="/src/assets/img/produto-2.png" alt="" srcset="">
+          </div>
+
+          <div>
+            <h2>Mochila notebook</h2>
+            <p>R$ 2.599,00</p>
+            <p>12x R$ 216,66</p>
           </div>
         </div>
-        
+      </div>
+
     </section>
   </main>
   <footer>
     <h1>footer</h1>
   </footer>
+  <script src="/script/banner.js"></script>
 </body>
+
 </html>
