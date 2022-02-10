@@ -1,0 +1,94 @@
+.procuct {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 350px;
+    margin: 20px;
+    background: #fff;
+    box-shadow: var(--shadow);
+}
+
+.product-description {
+    width: 350px;
+    height: 100%;
+    overflow: auto;
+    margin: 20px 10px;
+}
+
+.product-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 20px;
+    margin: auto 15px;
+    height: 90%;
+    overflow: auto;
+    box-shadow: var(--shadow);
+}
+
+.product-actions h4 {
+    color: #A9A9A9;
+}
+
+.product-actions #before {
+    color: var(--seconary-bg-color);
+    font-size: 25px;
+}
+
+.product-actions #after {
+    color: lightgreen;
+    font-size: 25px;
+}
+
+.product-actions input[type='text'] {
+    border: 1px solid lightgreen;
+    height: 30px;
+}
+
+.product-actions input[type='submit'] {
+    background-color: lightgreen;
+    border: none;
+    padding: 5px;
+}
+
+.product-actions input[type='submit']:hover {
+    border: 1px solid green;
+}
+
+.product-actions #ok {
+    height: 30px;
+    width: 30px;
+}
+
+.product-actions #buy {
+    height: 30px;
+    width: 100%;
+}
+
+main .show-down {
+    margin: 20px;
+}
+
+.sd-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.sd-card {
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 100ms ease-in-out;
+}
+
+.sd-card:hover {
+    transform: scale(1.05);
+}
+
+.sd-card img {
+    max-width: 100%;
+}
+
+.sd-card-content {
+    padding: 30px;
+}

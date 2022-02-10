@@ -1,0 +1,119 @@
+header {
+    width: 100%;
+    height: 70px;
+    background-color: var(--main-bg-color);
+    display: flex;
+    box-shadow: 10px 2px 2px 1px rgba(0, 0, 0, 20%);
+    border-bottom: 2px solid var(--seconary-bg-color);
+}
+
+header .logo {
+    margin: auto 0 auto 30px;
+    width: 150px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--seconary-bg-color);
+}
+
+header .logo a {
+    text-decoration: none;
+    color: #fff;
+    margin-top: 1px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+#menu li {
+    padding: 10px;
+    position: relative;
+    text-decoration: none;
+}
+
+#menu li ul {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    margin-top: 10px;
+    background-color: var(--main-bg-color);
+}
+
+#menu li a {
+    color: #fff;
+    text-decoration: none;
+    transition: all .50s ease;
+}
+
+#menu li #menu-item:hover {
+    transform: scale(1.1);
+    border-bottom: 2.5px solid var(--seconary-bg-color);
+    border-radius: 5px;
+}
+
+#menu li:hover ul {
+    display: block;
+}
+
+#menu li ul li:hover {
+    background-color: var(--seconary-bg-color);
+}
+
+.search-form {
+    width: 400px;
+    margin: auto 0 auto 30px;
+}
+
+.search-form input[type='search'] {
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    color: #E6E7E9;
+    border: 1px solid var(--seconary-bg-color);
+}
+
+.search-form input::placeholder {
+    padding-left: 10px;
+    color: #000;
+    font-family: 'Roboto bold';
+
+}
+
+.search-form button {
+    margin: auto;
+    background: transparent;
+    border: none;
+
+}
+
+.search-form button i {
+    margin: auto;
+    font-size: 20px;
+    color: #fff;
+}
+
+.search-form button i:hover, .user-actions ul i:hover {
+    color: var(--seconary-bg-color);
+    cursor: pointer;
+}
+.user-actions {
+    margin: auto 20px;
+    float: right;
+}
+.user-actions ul{
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+}
+.user-actions ul li{
+    margin: 5px;
+}
+
+.user-actions ul i{
+    color: #fff;
+}
