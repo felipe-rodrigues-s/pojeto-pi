@@ -92,3 +92,14 @@ main .show-down {
 .sd-card-content {
     padding: 30px;
 }
+
+@media screen and (max-width: 1015px) {
+    .product-actions #ok {
+        margin-top: 5px;
+        width: 100%;
+    }
+
+    .product-actions input[type='text'] {
+        width: 100%;
+    }
+}
