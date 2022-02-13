@@ -2,14 +2,16 @@
     <%- include partials/slider.ejs%>
         <section class="main">
             <div class="cards">
-                <div class="card">
-                    <a href=""> <img src="img/products/produto-1.png" alt=""></a>
-                    <div class="card-content">
-                        <h2>Preço</h2>
-                        <p>Fique avonatde para usar</p>
+                <% for (var i = 0; i < 5; i++) {%>
+                    <div class="card">
+                        <a href="/product"> <img src="img/products/produto-1.png" alt=""></a>
+                        <div class="card-content">
+                            <h2>Preço</h2>
+                            <p>Fique avonatde para usar</p>
+                        </div>
                     </div>
-                </div>
-                <div class="card">
+                <%}%>        
+                <!-- <div class="card">
                     <a href="/product"> <img src="img/products/produto-2.jpg" alt=""></a>
                     <div class="card-content">
                         <h2>Preço</h2>
@@ -70,9 +72,8 @@
                     <div class="card-content">
                         <h2>Preço</h1>
                             <p>Fique avonatde para usar</p>
-                    </div>
-                </div>
-
+                    </div>      
+                </div> -->
             </div>
         </section>
         </main>
