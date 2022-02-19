@@ -1,9 +1,10 @@
-<% for (var i = 0; i < 5; i++) {%>
+<% for (let produto of listaProdutos) {%>
   <div class="sd-card">
-    <a href="/product"><img src="img/products/produto-1.png" alt=""></a>
+    <a href="/product"><img src="img/kasic/atlas_krom_teclados_kasic_1.jpg" alt=""></a>
       <div class="sd-card-content">
-          <h2>Preço</h2>
-          <p>Fique avonatde para usar</p>
+          <h2><%= produto.valor %></h2>
+          <p><%= produto.name %></p>
+          <p><%= produto.info %></p>
       </div>
   </div>
-<%}%>   
+<%}%>    
