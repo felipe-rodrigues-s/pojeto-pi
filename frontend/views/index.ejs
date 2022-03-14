@@ -1,10 +1,37 @@
-<%- include partials/header.ejs%>
-    <%- include partials/slider.ejs%>
-        <section class="main">
-            <div class="cards">
-                <%- include partials/cards/cards-categorias%>
+<section class="slider">
+    <% for( let i=0; i < slides.length; i++ ) { %>
+        <div class="slide fade">
+            <img src="<%= slides[i].image %>" alt="<%= slides[i].name %> ">
+            <div class="text">
+                <h2>Here you find everuthinh!</h2>
+                <button>Saiba mais</button>
             </div>
-        </section>
-        </main>
-        <!-- end main content -->
-        <%- include partials/footer.ejs%>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <% } %>
+            <div class="dot-content">
+                <% for( let i=0; i < slides.length; i++ ) { %>
+                    <span class="dot" onclick="currentSlide(i+1)"></span>
+                    <% } %>
+            </div>
+</section>
+
+<section class="main">
+    <div class="cards">
+        <% for( let i=0; i < products.length; i++ ) { %>
+            <div class="card">
+                <a href="/product/details/<%= products[i].id %> "> <img src="<%= products[i].image %> " alt="<%= products[i].name %> "></a>
+                <div class="card-content">
+                    <h2>R$ <%= products[i].price %>
+                    </h2>
+                    <p>
+                        <%= products[i].description %>
+                    </p>
+                </div>
+            </div>
+            <% } %>
+    </div>
+
+</section>
+<!-- end main content -->

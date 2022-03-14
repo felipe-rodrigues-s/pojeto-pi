@@ -3,6 +3,32 @@ main {
     width: 100%;
 }
 
+#call-center {
+    z-index: 2;
+    position: absolute;
+    left: 92%;
+    top: 82%;
+    text-align: center;
+}
+
+#call-center button {
+    position: fixed;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid grey;
+    background-color: var(--seconary-bg-color);
+}
+
+#call-center button:active {
+    border: none;
+}
+
+#call-center button img {
+    width: 45px;
+
+}
 
 main .slider {
     margin: 20px;

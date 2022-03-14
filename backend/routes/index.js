@@ -1,9 +1,25 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-const IndexContoller = require('../controller/IndexController')
+
+//helpers
+const getAllSlides = require('../helpers/get-slides')
+const getAllProducts = require('../helpers/get-products')
 
 /* GET home page. */
-router.get('/', IndexContoller.index);
+router.get('/', function (req, res, next) {
+
+  getAllSlides.then(slides => {
+    getAllProducts.then(products => {
+      res.render('index', { slides, products })
+    })
+  })
+    .catch(error => {
+      console.log(error)
+    })
+
+
+});
+
 
 module.exports = router;

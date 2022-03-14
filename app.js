@@ -6,23 +6,22 @@ const logger = require('morgan');
 
 //configuring routes
 const indexRouter = require('./routes/index');
-const productRouter = require('./routes/productRouter');
+const productRouter = require('./routes/productRouter')
 const usersRouter = require('./routes/users');
-const loginRouter = require("./routes/loginRouter");
 const { dir } = require('console');
 
 
-const expressLayouts = require('express-ejs-layouts');
+const expressLayouts = require('express-ejs-layouts')
 
 
 
 const app = express();
 
-console.log(`${__filename}../frontend/public`);
+console.log(`${__filename}../frontend/public`)
 // view engine setup
 app.set('views', __dirname + '/../frontend/views');
 app.set('view engine', 'ejs');
-app.set('layout', 'layout/layout');
+app.set('layout', 'layout/layout')
 
 
 
@@ -41,9 +40,8 @@ app.use(expressLayouts)
 
 
 app.use('/', indexRouter);
-app.use('/product', productRouter);
+app.use('/product', productRouter)
 app.use('/users', usersRouter);
-app.use("/login", loginRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
