@@ -1,0 +1,22 @@
+{
+  "name": "projeto-pi",
+  "version": "1.0.0",
+  "description": "https://github.com/felipe-rodrigues-s/projeto-pi.git",
+  "main": "app.js",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git+https://github.com/felipe-rodrigues-s/projeto-pi.git",
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felipe-rodrigues-s/projeto-pi/issues"
+  },
+  "homepage": "https://github.com/felipe-rodrigues-s/projeto-pi#readme"
+}
