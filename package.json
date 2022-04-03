@@ -19,7 +19,8 @@
     "jest": "^27.5.1"
   },
   "dependencies": {
-    "dotenv": "^16.0.0"
+    "dotenv": "^16.0.0",
+    "supertest": "^6.2.2"
   },
   "repository": "git+https://github.com/felipe-rodrigues-s/projeto-pi.git",
   "author": "",
