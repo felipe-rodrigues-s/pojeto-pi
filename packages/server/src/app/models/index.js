@@ -14,6 +14,8 @@ const sequelize = new Sequelize(
   config
 );
 
+sequelize.models = [];
+
 fs.readdirSync(__dirname)
   .filter((file) => {
     return (
@@ -23,15 +25,16 @@ fs.readdirSync(__dirname)
   .forEach((file) => {
     const model = require(path.join(__dirname, file));
     db[model.name] = model;
+    sequelize.models.push(db[model.name]);
   });
 
 Object.keys(db).forEach((modelName) => {
   if (db[modelName].associate) {
     db[modelName].associate(db);
+    sequelize.models.push(db[modelName].associate(db));
   }
 });
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
-
 module.exports = db;

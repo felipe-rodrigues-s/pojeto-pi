@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require('path');
 require('dotenv').config({
   path: process.env.NODE_ENV === 'test' ? '.env.test' : '.env',
 });
@@ -9,7 +9,7 @@ module.exports = {
   password: process.env.DB_PASS,
   database: process.env.DB_NAME,
   dialect: process.env.DB_DIALECT || 'postgres',
-  storage: "./__tests__/database.sqlite",
+  storage: './__tests__/database.sqlite',
   operatorsAliases: false,
   logging: false,
   define: {

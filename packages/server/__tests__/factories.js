@@ -7,7 +7,7 @@ let password = faker.internet.password();
 factory.define('User', User, {
   name: faker.name.findName(),
   email: faker.internet.email(),
-  phone: faker.faker.phone.phoneNumber(),
+  phone: faker.phone.phoneNumber(),
   password: password,
   confirmPassword: password,
 });

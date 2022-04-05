@@ -1,6 +1,7 @@
 const validator = require('validator');
+const User = require('../../models/User');
 
-const userFormValidation = (req, res, next) => {
+const AdminFormRegisterValidation = async (req, res, next) => {
   const { name, email, phone, password, confirmPassword } = req.body;
 
   if (!name) {
@@ -39,7 +40,13 @@ const userFormValidation = (req, res, next) => {
     return res.status(422).json({ message: 'The password dont match!' });
   }
 
+  //checking if the email is already taken by onether user
+  const checkuser = await User.findOne({ where: { email } });
+
+  if (checkuser) {
+    return res.status(422).json({ message: 'Please another email!' });
+  }
   next();
 };
 
-module.exports = userFormValidation;
+module.exports = AdminFormRegisterValidation;

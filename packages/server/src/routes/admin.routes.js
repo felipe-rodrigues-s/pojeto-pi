@@ -4,7 +4,7 @@ const router = require('express').Router();
 const AdminController = require('../app/controllers/AdminController');
 
 //middlewares
-const userFormValidation = require('../app/middleware/validations/register-form-validations');
+const admiRegisterFormValidations = require('../app/middleware/validations/Admin-register-form-validations');
 
-router.post('/register', userFormValidation, AdminController.register);
+router.post('/register', admiRegisterFormValidations, AdminController.register);
 module.exports = router;

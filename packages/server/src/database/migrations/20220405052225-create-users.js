@@ -31,7 +31,7 @@ module.exports = {
       },
       isActive: {
         type: Sequelize.BOOLEAN,
-        defaultValue: false,
+        defaultValue: true,
       },
       createdAt: {
         type: Sequelize.DATE,
