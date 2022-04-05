@@ -19,6 +19,7 @@ describe('Authentication ', () => {
       email: 'gervasio@gmail.com',
       phone: '85997518647',
       password: '123456',
+      confirmPassword: '123456',
     };
   });
 

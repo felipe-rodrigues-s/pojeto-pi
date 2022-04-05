@@ -7,7 +7,10 @@ const userFormValidation = (req, res, next) => {
     return res.status(422).json({ message: 'The name is required!' });
   } else {
     let newName = name.replaceAll(/\s/g, '');
-    if (newName.length < 4) return res.status(422).json({ message: 'The name must have at lest 4 characters!' });
+    if (newName.length < 4)
+      return res
+        .status(422)
+        .json({ message: 'The name must have at lest 4 characters!' });
   }
 
   if (!email) {
@@ -26,7 +29,10 @@ const userFormValidation = (req, res, next) => {
     return res.status(422).json({ message: 'The password is requered!' });
   } else {
     let newPassword = password.replaceAll(/\s/g, '');
-    if (newPassword.length < 6) return res.status(422).json({ message: 'The password must have at lest 6 characters!' });
+    if (newPassword.length < 6)
+      return res
+        .status(422)
+        .json({ message: 'The password must have at lest 6 characters!' });
   }
 
   if (password != confirmPassword) {
