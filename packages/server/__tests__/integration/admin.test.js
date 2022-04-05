@@ -34,7 +34,7 @@ describe('Authentication ', () => {
     expect(response.status).toBe(422);
   });
 
-  it('lets see the hash', async () => {
+  it('should login after create user', async () => {
     let user = {
       name: 'gervasio',
       email: 'gervasio@gmail.com',
@@ -43,7 +43,6 @@ describe('Authentication ', () => {
       confirmPassword: '123456',
     };
     const response = await request(app).post('/admins/register').send(user);
-    console.log(response.text);
-    expect(response.status).toBe(201);
+    expect(response.status).toBe(200);
   });
 });
