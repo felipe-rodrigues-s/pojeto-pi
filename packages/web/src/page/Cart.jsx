@@ -1,4 +1,4 @@
-export function Carts() {
+export function Cart() {
   return (
     <>
       <h1>Carts</h1>;

@@ -1,0 +1,49 @@
+footer {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var( --color-primary);
+    box-shadow: 10px 2px 2px 1px rgba(0, 0, 0, 20%);
+    border-top: 2px solid var(--color-secondary);
+}
+
+.contacts, .social-media {
+    padding: 5px;
+    color: #fff;
+    text-align: center;
+}
+
+.contacts ul li, .social-media ul li {
+    margin-top: 7px;
+}
+
+.contacts ul li a, .social-media ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contacts ul li a>i, .social-media ul li a>i {
+    color: var(--color-secondary);
+}
+
+.payments, .social-media {
+    text-align: center;
+    color: #fff;
+}
+
+.payments ul, .social-media ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.payments ul li, .social-media ul li {
+    margin: 5px
+}
+
+.payments ul i, .social-media ul i {
+    font-size: 26px;
+    color: var(--color-secondary);
+}

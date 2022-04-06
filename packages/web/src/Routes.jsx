@@ -4,7 +4,7 @@ import {
   Route
 } from "react-router-dom";
 
-import { Carts } from "./page/Carts";
+import { Cart } from "./page/Cart";
 import { Catalogo } from "./page/Catalogo";
 import { Home } from "./page/Home";
 
@@ -17,7 +17,7 @@ export function AppRoutes() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/cart" element={<Carts />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="/catalogo" element={<Catalogo />} />
       </Routes>
     </Router>
