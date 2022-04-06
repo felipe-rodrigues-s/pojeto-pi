@@ -15,12 +15,10 @@
     "style:fix": "prettier --write './**/*.js'"
   },
   "devDependencies": {
-    "@projeto-pi/eslint-config": "*",
-    "jest": "^27.5.1"
+    "@projeto-pi/eslint-config": "*"
   },
   "dependencies": {
-    "dotenv": "^16.0.0",
-    "supertest": "^6.2.2"
+    "dotenv": "^16.0.0"
   },
   "repository": "git+https://github.com/felipe-rodrigues-s/projeto-pi.git",
   "author": "",

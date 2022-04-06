@@ -1,8 +1,8 @@
-const path = require('path');
 require('dotenv').config({
-  path: process.env.NODE_ENV === 'test' ? '.env.test' : 'env',
+  path: process.env.NODE_ENV === 'test' ? '.env.test' : '.env',
 });
 
+const path = require('path');
 const cors = require('cors');
 const express = require('express');
 const cors_origin = process.env.CORS_ORIGIN;

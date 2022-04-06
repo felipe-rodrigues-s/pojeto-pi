@@ -5,21 +5,28 @@
   "license": "MIT",
   "scripts": {
     "start": "node ./src/server.js",
-    "predev": "NODE_ENV=test sequelize db:migrate",
+    "predev": "NODE_ENV=test  sequelize db:migrate",
     "dev": "NODE_ENV=test  nodemon ./src/server.js ",
     "postdev": "NODE_ENV=test sequelize db:migrate:undo:all",
     "pretest": "NODE_ENV=test sequelize db:migrate",
-    "test": "NODE_ENV=test jest  --watch '/__tests__/integration' '/__tests__/unit'",
+    "test": "jest --watchAll",
     "posttest": "NODE_ENV=test sequelize db:migrate:undo:all"
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "express": "^4.17.3",
-    "sequelize": "^6.17.0",
+    "factory-girl": "^5.0.4",
+    "faker": "^4.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^7.8.0",
+    "sequelize": "^4.42.0",
     "validator": "^13.7.0"
   },
   "devDependencies": {
-    "sequelize-cli": "^6.4.1",
-    "sqlite3": "^5.0.2"
+    "jest": "^24.1.0",
+    "sequelize-cli": "^5.4.0",
+    "sqlite3": "^4.0.6",
+    "supertest": "^6.2.2"
   }
 }
