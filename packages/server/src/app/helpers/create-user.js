@@ -1,13 +1,9 @@
 //models
 const User = require('../models/User');
 
-//helper
-const createHash = require('./create-hash');
-
 const createUser = async (req) => {
   const { name, email, phone, password } = req.body;
   //hashing the password
-  const passwordHash = await createHash(req);
   let buildUser = {};
 
   if (req.originalUrl === '/admins/register') {
@@ -15,7 +11,7 @@ const createUser = async (req) => {
       name,
       email,
       phone,
-      password: passwordHash,
+      password,
       isAdmin: true,
     });
   } else {
@@ -23,7 +19,7 @@ const createUser = async (req) => {
       name,
       email,
       phone,
-      password: passwordHash,
+      password,
     });
   }
 

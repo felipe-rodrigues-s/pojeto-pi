@@ -9,10 +9,10 @@ let user = {
   confirmPassword: '123456',
 };
 
-//app
+//app, factory, truncate
 const app = require('../../src/app');
 
-describe('Authentication ', () => {
+describe('Register admin validations', () => {
   beforeEach(async () => {
     user = {
       name: 'gervasio',

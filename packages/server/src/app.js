@@ -13,9 +13,11 @@ app.use(express.json());
 app.use(express.static(path.resolve(__dirname, '..', 'public')));
 
 //importing routes
+const authRoutes = require('./routes/auth.routes');
 const adminRoutes = require('./routes/admin.routes');
 
 //configuring routes
+app.use('/auth', authRoutes);
 app.use('/admins', adminRoutes);
 
 //not found routes
