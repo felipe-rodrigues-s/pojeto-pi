@@ -1,9 +1,6 @@
 //models
 const User = require('../models/User');
 
-//helper
-const createHash = require('./create-hash');
-
 const createUser = async (req) => {
   const { name, email, phone, password } = req.body;
   //hashing the password
