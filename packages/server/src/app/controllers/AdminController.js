@@ -1,11 +1,9 @@
 //models
-const User = require('../models/User');
 const Admin = require('../models/Admin');
 
 //helper
-const createHash = require('../helpers/create-hash');
 const createUser = require('../helpers/create-user');
-const createUserToken = require('../helpers/create-user-token')
+const createUserToken = require('../helpers/create-user-token');
 
 module.exports = class AdminController {
   static async register(req, res) {
@@ -19,7 +17,7 @@ module.exports = class AdminController {
       });
       const admin = await buildAdmin.save();
       //logging int the user
-      createUserToken(user.dataValues, req, res)
+      createUserToken(user.dataValues, req, res);
       return res.status(201).send();
     }
   }
