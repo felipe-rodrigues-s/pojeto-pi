@@ -1,7 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useEffect,useState } from 'react';
 import { Carousel } from 'react-bootstrap';
 
-// import { Image } from '../assets/carrousel.json';
+
 
 export function Header() {
   return (
@@ -55,19 +56,36 @@ export function Header() {
 };
 
 export function CarouselContainer() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/src/assets/img-carousel.json")
+      .then((res) => res.json())
+      .then(setData);
+  }, []);
+
+  if (!data || !data.length) return null;
+
   return (
     <Carousel>
-      <Carousel.Item interval={1000}>
+       {data.map((item) => {
+        const {img, category} = item;
+        return (
+          <Carousel.Item interval={10000}>
         <img
           className="d-block w-100"
-          src="https://api.kromgaming.com/thumbnails/product_gallery_background/uploads/product/gallery/backgrounds/krom_kasic_tkl_background-4e850zrpe6.jpg"
+          src={img}
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>Hreadseets</h3>
+          <h3>{category}</h3>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item interval={1000}>
+        )
+      })}
+
+
+      {/* <Carousel.Item interval={500}>
         <img
           className="d-block w-100"
           src="https://api.kromgaming.com/thumbnails/product_gallery_background/uploads/product/gallery/backgrounds/krom_kappa_background-ttk40jd770.jpg"
@@ -86,7 +104,7 @@ export function CarouselContainer() {
         <Carousel.Caption>
           <h3>Mouses</h3>
         </Carousel.Caption>
-      </Carousel.Item>
+      </Carousel.Item> */}
     </Carousel>
   );
 };

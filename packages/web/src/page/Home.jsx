@@ -1,5 +1,5 @@
 import { Header, Footer, CarouselContainer } from "../components/Layout";
-import { Card } from "../components/Cards";
+import { Category } from "../components/Categoria";
 
 export function Home() {
   return (
@@ -7,10 +7,8 @@ export function Home() {
       <Header />
       <CarouselContainer />
 
-      <div className="Cards">
-        <Card />
-        <Card />
-        <Card />
+      <div className="Categorys">
+        <Category />
       </div>
 
       <Footer />

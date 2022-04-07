@@ -1,0 +1,40 @@
+[
+  {
+    "img1":"https://api.kromgaming.com/thumbnails/product_gallery_background/uploads/product/gallery/backgrounds/krom_kasic_tkl_background-4e850zrpe6.jpg",
+    "img2":"https://api.kromgaming.com/thumbnails/product_gallery_background/uploads/product/gallery/backgrounds/tlsek928td-bg_section01.jpg",
+    "img3":"https://api.kromgaming.com/thumbnails/product_gallery_background/uploads/product/gallery/backgrounds/krom_kuma_background-pjndvw8rhn.jpg",
+    "category":"Teclados"
+  },
+  {
+    "img1":"https://api.kromgaming.com/thumbnails/product_gallery_background/uploads/product/gallery/backgrounds/8fkqbktnfv-krom_kane_setup_01.jpg",
+    "img2":"https://api.kromgaming.com/thumbnails/product_gallery_background/uploads/product/gallery/backgrounds/krom_klaim_setup-uy971lzlv5.jpg",
+    "img3":"https://api.kromgaming.com/thumbnails/product_gallery_background/uploads/product/gallery/backgrounds/vloqjpey7l-krom_kaox_background.jpg",
+    "category":"Mouses"
+  },
+  {
+    "img1":"https://api.kromgaming.com/thumbnails/product_gallery_background/uploads/product/gallery/backgrounds/krom_kappa_background-ttk40jd770.jpg",
+    "img2":"https://api.kromgaming.com/thumbnails/product_gallery_background/uploads/product/gallery/backgrounds/krom_klaim_setup-uy971lzlv5.jpg",
+    "img3":"https://api.kromgaming.com/thumbnails/product_gallery_background/uploads/product/gallery/backgrounds/pzzm918sv6-banner_header.png",
+    "category":"Headsets"
+  },
+  {
+    "img1":"https://api.kromgaming.com/thumbnails/product_gallery_background/uploads/product/gallery/backgrounds/krom_kappa_background-ttk40jd770.jpg",
+    "img2":"https://api.kromgaming.com/thumbnails/product_gallery_background/uploads/product/gallery/backgrounds/krom_klaim_setup-uy971lzlv5.jpg",
+    "img3":"https://api.kromgaming.com/thumbnails/product_gallery_background/uploads/product/gallery/backgrounds/pzzm918sv6-banner_header.png",
+    "category":"Controllers"
+  },
+  {
+    "img1":"https://api.kromgaming.com/thumbnails/product_gallery_background/uploads/product/gallery/backgrounds/krom_kappa_background-ttk40jd770.jpg",
+    "img2":"https://api.kromgaming.com/thumbnails/product_gallery_background/uploads/product/gallery/backgrounds/krom_klaim_setup-uy971lzlv5.jpg",
+    "img3":"https://api.kromgaming.com/thumbnails/product_gallery_background/uploads/product/gallery/backgrounds/pzzm918sv6-banner_header.png",
+    "category":"Mousepads"
+  },
+  {
+    "img1":"https://api.kromgaming.com/thumbnails/product_gallery_background/uploads/product/gallery/backgrounds/krom_kappa_background-ttk40jd770.jpg",
+    "img2":"https://api.kromgaming.com/thumbnails/product_gallery_background/uploads/product/gallery/backgrounds/krom_klaim_setup-uy971lzlv5.jpg",
+    "img3":"https://api.kromgaming.com/thumbnails/product_gallery_background/uploads/product/gallery/backgrounds/pzzm918sv6-banner_header.png",
+    "category":"Microfones"
+  }
+
+
+]

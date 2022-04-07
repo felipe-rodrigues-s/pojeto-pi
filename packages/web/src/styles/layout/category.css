@@ -1,4 +1,4 @@
-.Cards{
+.Categorys{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -7,7 +7,7 @@
     width: 100%;
 }
 
-.Card{
+.Category{
     width: 30vw;
     background-color: #fff;
     border-radius: 5px;
@@ -16,9 +16,22 @@
     padding: 5px;
     text-align: center;
     margin: 20px auto;
+
+
 }
-.Card-image img{
+
+.Category-image{
+  display: flex;
+  justify-content: center;
+  height: 200px;
   width: 100%;
+  overflow: hidden;
+
+
+}
+.Category-image img{
+  width: 33%;
+  object-fit: cover;
 }
 .descriptionCategoria{
   color: var(--color-secondary);
