@@ -18,7 +18,8 @@ export function Category() {
       {data.map((item) => {
         const { img1, img2, img3, category } = item;
         return (
-          <div className="Category">
+
+          <a href={category} className="Category">
             <div className="Category-image">
 
               <img src={img1} />
@@ -26,7 +27,7 @@ export function Category() {
               <img src={img3} />
             </div>
             <p className="descriptionCategoria">{category}</p>
-          </div>
+          </a>
         )
       })}
     </>
