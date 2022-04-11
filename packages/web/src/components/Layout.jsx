@@ -3,7 +3,6 @@ import { useEffect,useState } from 'react';
 import { Carousel } from 'react-bootstrap';
 
 
-
 export function Header() {
   return (
     <>
@@ -119,12 +118,14 @@ export function Footer() {
           <li>
             <a href="">
               <i className="fa-brands fa-whatsapp"></i>
+
               (00)9 0000-0000
             </a>
           </li>
           <li>
             <a href="">
               <i className="fa-solid fa-at"></i>
+
               faleconosco@sac.com.br
             </a>
           </li>
