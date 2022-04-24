@@ -1,6 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect,useState } from 'react';
 import { Carousel } from 'react-bootstrap';
+import'../styles/layout/header.css'
+import'../styles/layout/logo.css'
+import'../styles/layout/menu.css'
+import'../styles/layout/footer.css'
 
 
 export function Header() {
@@ -24,17 +28,6 @@ export function Header() {
               Todos os Produtos
             </a>
           </li>
-
-          <li>
-            <a id="menu-item" href="/">
-              Mouses
-            </a>
-          </li>
-          <li>
-            <a id="menu-item" href="/">
-              Teclado
-            </a>
-          </li>
         </ul>
         <div className="search-form">
           <form action="/product/search" method="get">
@@ -44,12 +37,12 @@ export function Header() {
             </button>
           </form>
         </div>
+        <div className="log">
+        <i class="fa-regular fa-user"></i>
+          <a href="/login">Login/Cadastro</a>
+        </div>
       </header>
-      <section id="call-center">
-        <button>
-          <img src="./src/assets/icons/headset-64.png" alt="Atendimento" />
-        </button>
-      </section>
+
     </>
   )
 };

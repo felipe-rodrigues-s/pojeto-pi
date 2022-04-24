@@ -4,12 +4,13 @@ import {
   Route
 } from "react-router-dom";
 import { ProductsCategory } from "./page/ProductsCategory";
-
 import { Cart } from "./page/Cart";
 import { Catalogo } from "./page/Catalogo";
 import { Home } from "./page/Home";
+import { Product } from "./page/Products";
+import { Login } from "./page/Log";
 
-const url = window.location.pathname;
+
 
 
 export function AppRoutes() {
@@ -20,8 +21,14 @@ export function AppRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/catalogo" element={<Catalogo />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/teclados" element={<ProductsCategory />} />
-        <Route path={url} element={<ProductsCategory />} />
+        <Route path="/mouses" element={<ProductsCategory />} />
+        <Route path="/headsets" element={<ProductsCategory />} />
+        <Route path="/controllers" element={<ProductsCategory />} />
+        <Route path="/mousepads" element={<ProductsCategory />} />
+        <Route path="/microfones" element={<ProductsCategory />} />
       </Routes>
     </Router>
 

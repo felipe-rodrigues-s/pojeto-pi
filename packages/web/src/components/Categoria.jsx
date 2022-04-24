@@ -13,7 +13,7 @@ export function Category() {
   if (!data || !data.length) return null;
 
 
-  return (
+   return (
     <>
       {data.map((item) => {
         const { img1, img2, img3, category } = item;

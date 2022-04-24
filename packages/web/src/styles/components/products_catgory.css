@@ -1,0 +1,39 @@
+.Cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+.Card{
+  width: 20vw;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  margin-bottom: 20px;
+  padding: 5px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.Card-image{
+display: flex;
+justify-content: center;
+height: 200px;
+width: 100%;
+overflow: hidden;
+}
+
+.Card-image img{
+object-fit: cover;
+}
+
+
+
+.footer_product{
+  position: fixed;
+  bottom: 1px;
+  width: 99vw;
+}

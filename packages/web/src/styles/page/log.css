@@ -1,0 +1,50 @@
+.body_log{
+ height: 100vh;
+ display: flex;
+ align-items: center;
+ flex-direction: column;
+}
+.header_log{
+  justify-content: center;
+  padding: 10px;
+  height: 100px
+}
+.header_log .fa-house{
+  color: var(--color-secondary);
+  font-size: 50px;
+  margin: 10px;
+
+}
+
+div .login{
+  display: flex;
+  flex-direction: row;
+  width: 80vw;
+  height: 100%;
+  justify-content:center;
+  align-items:center;
+
+}
+
+.login .form_log{
+  margin:auto;
+
+}
+
+.login .form_log form{
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+.login .form_log form .form_label{
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.login .form_log form input{
+  font-size: 20px;
+  margin: 15px;
+}
+
+
