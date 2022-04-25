@@ -1,5 +1,18 @@
 import "../styles/page/log.css"
+import { useState } from "react";
+
+//
+import api from '../utils/api'
+
 export function Login() {
+  const [data,setData]= useState('')
+  async function login (){
+    setData(await api.post('/auth/login'))
+    console.log(data.data)
+  }
+
+
+
   return (
     <div className="body_log">
       <header className="header_log">
@@ -10,13 +23,14 @@ export function Login() {
 
       <div className="login">
         <div className="form_log">
-          <form action="/" method="post">
+              {data}
             <label>Login</label>
             <label>email</label>
             <input type="email" name="email" />
             <label>Senha</label>
             <input type="password" name="pass" id="pass" />
-          </form>
+            <input type='submit' onClick={login} ></input>
+
         </div>
 
         <div className="form_log">

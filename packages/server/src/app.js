@@ -11,6 +11,8 @@ const cors_origin = process.env.CORS_ORIGIN;
 const app = express();
 app.use(express.json());
 app.use(express.static(path.resolve(__dirname, '..', 'public')));
+app.use(cors())
+
 
 //importing routes
 const authRoutes = require('./routes/auth.routes');
