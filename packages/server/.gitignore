@@ -1,0 +1,13 @@
+node_modules
+
+public/images/products/*
+public/images/users/*
+
+!public/images/products
+!public/images/users
+
+src/database/dev/*
+
+
+.env
+.env.test

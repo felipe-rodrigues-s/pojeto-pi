@@ -1,0 +1,26 @@
+#call-center {
+  z-index: 2;
+  position: absolute;
+  left: 90%;
+  top: 79%;
+  text-align: center;
+}
+
+#call-center button {
+  position: fixed;
+  width: 75px;
+  height: 75px;
+  border-radius: 50% 50% 0% 50%;
+  cursor: pointer;
+  border: 2px solid grey;
+  background-color: var(--color-secondary);
+}
+
+#call-center button:active {
+  border: none;
+}
+
+#call-center button img {
+  width: 45px;
+
+}
