@@ -1,17 +1,39 @@
+
 import "../styles/page/log.css"
-import { useState } from "react";
+import React, { useState } from "react";
 
 //
 import api from '../utils/api'
 
+function initialState() {
+  return {
+    email: '',
+    password: '',
+  }
+}
+
 export function Login() {
-  const [data,setData]= useState('')
-  async function login (){
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  async function login() {
     setData(await api.post('/auth/login'))
     console.log(data.data)
   }
 
+  function handleSubmit(event){
+    event.preventDefault();
 
+  }
+
+  const  [values, setValue] = useState(initialState);
+
+  function onChange(event){
+    const {value, name} = event.target
+      setValue({
+        ...values,
+        [name]:  value,
+      })
+  };
 
   return (
     <div className="body_log">
@@ -23,32 +45,73 @@ export function Login() {
 
       <div className="login">
         <div className="form_log">
-              {data}
+          <form onSubmit={handleSubmit}>
             <label>Login</label>
-            <label>email</label>
-            <input type="email" name="email" />
-            <label>Senha</label>
-            <input type="password" name="pass" id="pass" />
-            <input type='submit' onClick={login} ></input>
 
+            <label htmlFor="email">email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              value={values.email}
+              onChange={onChange}
+            />
+
+            <label
+              htmlFor="password"
+            >Senha
+            </label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              value={values.password}
+              onChange={onChange}
+            />
+
+            <input
+              type='submit'
+              onClick={login}
+            />
+          </form>
         </div>
 
         <div className="form_log">
-          <form method="post">
-          <label>Cadastro</label>
+          <form onSubmit={handleSubmit}>
+            <label>Cadastro</label>
+
             <div className="form_label">
-            <label>Nome</label>
-            <input type="text" />
+              <label htmlFor="name">Nome</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Nome"
+              />
             </div>
 
             <div className="form_label">
-            <label>Email</label>
-            <input type="email" name="email" />
+              <label htmlFor="emailCadastro">Email</label>
+              <input type="email"
+                name="emailCadastro"
+                id="emailCadastro"
+                placeholder="Email"
+              />
             </div>
 
             <div className="form_label">
-            <label>Senha</label>
-            <input type="password" name="pass" id="pass" />
+              <label htmlFor="passwordCadastro">Senha</label>
+              <input
+                type="password"
+                name="passwordCadastro"
+                id="passwordCadastro"
+                placeholder="Password"
+              />
+            </div>
+            <div className="form_label">
+              <input type='submit' onClick={login} ></input>
             </div>
 
 
