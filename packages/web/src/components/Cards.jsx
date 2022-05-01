@@ -1,3 +1,4 @@
+
 export function Card() {
   return (
     <>
@@ -7,6 +8,7 @@ export function Card() {
             <img src="https://api.kromgaming.com/thumbnails/product_gallery_background/uploads/product/gallery/backgrounds/krom_kasic_tkl_background-4e850zrpe6.jpg" />
           </div>
           <p>Nome Poduto</p>
+
         </a>
       </div>
     </>

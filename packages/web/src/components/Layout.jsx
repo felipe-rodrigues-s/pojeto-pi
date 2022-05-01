@@ -38,7 +38,7 @@ export function Header() {
           </form>
         </div>
         <div className="log">
-        <i class="fa-regular fa-user"></i>
+        <i className="fa-regular fa-user"></i>
           <a href="/login">Login/Cadastro</a>
         </div>
       </header>

@@ -1,4 +1,12 @@
+import React, {useContext} from "react"
+
+import { AuthContext} from "../components/context/auth"
+
 export function Cart() {
+  const {autenticated,logout} = useContext(AuthContext)
+const handleLogout = ()=> {
+  logout()
+}
   return (
     <>
       <h1>Carts</h1>;
@@ -17,6 +25,8 @@ export function Cart() {
           </a>
         </ul>
       </nav>
+      <p>{String(autenticated)}</p>
+    <button onClick={handleLogout}>Logout</button>
     </>
   )
 }

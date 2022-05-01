@@ -1,45 +1,50 @@
 
 import "../styles/page/log.css"
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { AuthContext } from "../components/context/auth";
 
-//
-import api from '../utils/api'
+// import api from '../utils/api'
 
-function initialState() {
-  return {
-    email: '',
-    password: '',
-  }
-}
+// function initialState() {
+//   return {
+//     email: '',
+//     password: '',
+//   }
+// }
 
 export function Login() {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  async function login() {
-    setData(await api.post('/auth/login'))
-    console.log(data.data)
-  }
+  // async function login() {
+  //   setData(await api.post('/auth/login'))
+  //   console.log(data.data)
+  // }
+
+  const {autenticated, login} = useContext(AuthContext)
+
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
 
   function handleSubmit(event){
     event.preventDefault();
+    console.log("submit",  {email, password})
+    login(email, password)
 
   }
 
-  const  [values, setValue] = useState(initialState);
+  // const  [values, setValue] = useState(initialState);
 
-  function onChange(event){
-    const {value, name} = event.target
-      setValue({
-        ...values,
-        [name]:  value,
-      })
-  };
+  // function onChange(event){
+  //   const {value, name} = event.target
+  //     setValue({
+  //       ...values,
+  //       [name]:  value,
+  //     })
+  // };
 
   return (
     <div className="body_log">
       <header className="header_log">
         <a href="/">
-          <i class="fa-solid fa-house"></i>
+          <i className="fa-solid fa-house"></i>
         </a>
       </header>
 
@@ -54,8 +59,8 @@ export function Login() {
               name="email"
               id="email"
               placeholder="Email"
-              value={values.email}
-              onChange={onChange}
+              value={email}
+              onChange={(event)=>setEmail(event.target.value)}
             />
 
             <label
@@ -67,13 +72,12 @@ export function Login() {
               name="password"
               id="password"
               placeholder="Password"
-              value={values.password}
-              onChange={onChange}
+              value={password}
+              onChange={(event)=>setPassword(event.target.value)}
             />
 
             <input
-              type='submit'
-              onClick={login}
+              type='submit' value="Entra"
             />
           </form>
         </div>
@@ -111,7 +115,7 @@ export function Login() {
               />
             </div>
             <div className="form_label">
-              <input type='submit' onClick={login} ></input>
+              <input type='submit' value="Cadastra"/>
             </div>
 
 

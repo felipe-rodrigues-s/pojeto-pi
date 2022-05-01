@@ -1,19 +1,17 @@
-import React from "react";
-import { Route } from "react-router-dom";
-import StorageContext from "../../Store/Context";
 
-const RoutesPrivate = ({ component: Component, ...props }) => {
-  const {token} = useContext(StorageContext);
+import { Navigate} from "react-router-dom";
+import { AuthContext } from '../../context/auth'
+import {useContext} from "react"
+export const Private = ({children})=>{
+  const {autenticated, loading} = useContext(AuthContext)
 
-  return (
-    <Route
-      {...props}
-      render={() => token ?
-        <Component{...props} />
-        : <Redirect to="/login" />
-      }
-    />
-  )
+  if(loading){
+    return <div className="loading">Carregando...</div>
+  }
+
+  if(!autenticated){
+    return <Navigate to="/login"/>
+  }
+  return children
 }
 
-export default RoutesPrivate
