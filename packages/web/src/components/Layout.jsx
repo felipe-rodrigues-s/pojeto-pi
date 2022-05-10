@@ -29,14 +29,6 @@ export function Header() {
             </a>
           </li>
         </ul>
-        <div className="search-form">
-          <form action="/product/search" method="get">
-            <input type="search" name="search" id="" placeholder="Pesquise aqui ..." />
-            <button type="submit">
-              <img src="./src/assets/icons/lupa-24.png" alt="Busca produto" />
-            </button>
-          </form>
-        </div>
         <div className="log">
         <i className="fa-regular fa-user"></i>
           <a href="/login">Login/Cadastro</a>

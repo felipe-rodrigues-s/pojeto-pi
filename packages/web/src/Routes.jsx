@@ -26,7 +26,7 @@ export function AppRoutes() {
           <Route exact path="/cart" element={<Private><Cart /></Private>} />
           <Route exact path="/catalogo" element={<Catalogo />} />
           <Route exact path="/product" element={<Product />} />
-          <Route exact path="/login" element={<Login />} />
+          <Route path="/login" element={<Login />} />
           <Route exact path="/teclados" element={<ProductsCategory />} />
           <Route exact path="/mouses" element={<ProductsCategory />} />
           <Route exact path="/headsets" element={<ProductsCategory />} />
