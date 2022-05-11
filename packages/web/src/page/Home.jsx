@@ -4,7 +4,7 @@ import { CallCenter } from "../components/CallCenter";
 import'../styles/components/category.css'
 
 //api
-import api from '../utils/api'
+// import api from '../utils/api'
 
 export function Home() {
 
