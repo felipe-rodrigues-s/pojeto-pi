@@ -7,4 +7,5 @@ const AuthController = require('../app/controllers/AuthController');
 const userFormLoginValidation = require('../app/middleware/validations/login-form-validations');
 
 router.post('/login', userFormLoginValidation, AuthController.login);
+
 module.exports = router;

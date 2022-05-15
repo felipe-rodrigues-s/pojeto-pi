@@ -1,7 +1,8 @@
 import { Header, Footer, CarouselContainer } from "../components/Layout";
-import { Category } from "../components/Categoria";
+import { Products } from "../components/Products";
 import { CallCenter } from "../components/CallCenter";
-import'../styles/components/category.css'
+import'../styles/components/produto.css'
+
 
 //api
 // import api from '../utils/api'
@@ -13,9 +14,9 @@ export function Home() {
       <Header />
       <CarouselContainer />
 
-      <div className="Categorys">
+      <div id="Produtos">
         {}
-        <Category />
+        <Products />
       </div>
       <CallCenter />
 

@@ -5,6 +5,7 @@ import'../styles/layout/header.css'
 import'../styles/layout/logo.css'
 import'../styles/layout/menu.css'
 import'../styles/layout/footer.css'
+import { Link } from 'react-router-dom';
 
 
 export function Header() {
@@ -24,7 +25,7 @@ export function Header() {
             </a>
           </li>
           <li>
-            <a id="menu-item" href="/catalogo">
+            <a id="menu-item" href="/#Produtos">
               Todos os Produtos
             </a>
           </li>
@@ -67,28 +68,6 @@ export function CarouselContainer() {
       </Carousel.Item>
         )
       })}
-
-
-      {/* <Carousel.Item interval={500}>
-        <img
-          className="d-block w-100"
-          src="https://api.kromgaming.com/thumbnails/product_gallery_background/uploads/product/gallery/backgrounds/krom_kappa_background-ttk40jd770.jpg"
-          alt="Second slide"
-        />
-        <Carousel.Caption>
-          <h3>Teclados</h3>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://api.kromgaming.com/thumbnails/product_gallery_background/uploads/product/gallery/backgrounds/8fkqbktnfv-krom_kane_setup_01.jpg"
-          alt="Third slide"
-        />
-        <Carousel.Caption>
-          <h3>Mouses</h3>
-        </Carousel.Caption>
-      </Carousel.Item> */}
     </Carousel>
   );
 };
