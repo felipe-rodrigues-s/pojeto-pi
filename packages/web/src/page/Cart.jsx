@@ -1,32 +1,39 @@
-import React, {useContext} from "react"
+import React from "react"
 
-import { AuthContext} from "../components/context/auth"
+import { Footer, Header } from "../components/Layout"
+
+import "../styles/page/cart.css"
+
+
+const  products = JSON.parse(localStorage.getItem("product"))
+
 
 export function Cart() {
-  const {autenticated,logout} = useContext(AuthContext)
-const handleLogout = ()=> {
-  logout()
-}
+
+
   return (
-    <>
-      <h1>Carts</h1>;
-      <nav>
-        <ul>
-          <a href="/">
-            <li>Home</li>
-          </a>
 
-          <a href="/catalogo">
-            <li>catalogo</li>
-          </a>
+    <div className="cart">
+      <Header />
+      <section >
 
-          <a href="/cart">
-            <li>cart</li>
-          </a>
-        </ul>
-      </nav>
-      <p>{String(autenticated)}</p>
-    <button onClick={handleLogout}>Logout</button>
-    </>
+    { products.map((product) => {
+           return (
+            <>
+               {/* <img src={img} />  */}
+            <p>{product.name}</p>
+            <p>{product.description}</p>
+            <p>{product.amount}</p>
+            </>
+          )
+    }
+    )}
+
+      </section>
+
+
+
+      <Footer />
+    </div>
   )
 }

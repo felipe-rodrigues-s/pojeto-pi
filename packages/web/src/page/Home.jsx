@@ -3,7 +3,6 @@ import { Products } from "../components/Products";
 import { CallCenter } from "../components/CallCenter";
 import'../styles/components/produto.css'
 
-
 //api
 // import api from '../utils/api'
 
@@ -14,8 +13,9 @@ export function Home() {
       <Header />
       <CarouselContainer />
 
+
       <div id="Produtos">
-        {}
+
         <Products />
       </div>
       <CallCenter />

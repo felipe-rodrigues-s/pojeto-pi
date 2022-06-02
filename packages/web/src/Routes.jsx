@@ -23,7 +23,7 @@ export function AppRoutes() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/produto/:id" element={<Product />} />
-          <Route exact path="/cart/:id" element={<Cart />} />
+          <Route exact path="/cart" element={<Cart />} />
         </Routes>
       </AuthProvider>
     </Router>

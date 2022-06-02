@@ -4,11 +4,17 @@ import "../styles/page/products.css"
 
 import { useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
-import { Carousel } from "react-bootstrap";
+
 
 
 
 export function Product() {
+
+  const idProduct = window.location.pathname
+
+  let product = idProduct.split('/')[2]
+
+
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -19,39 +25,46 @@ export function Product() {
 
   if (!data || !data.length) return null;
 
+
+
   return (
     <div id="secaoProduto">
       <div className="header_product">
         <Header />
       </div>
 
-      {console.log(data.map(function (item) {
-        if (item.id == 2) {
-          console.log(item.name)
-        }
-
-      }))}
 
 
       <div id="areaProduto">
         {data.map((item) => {
+
+          let products = JSON.parse(localStorage.getItem("product"))|| []
+
           const { id, img, name, description, amount } = item;
-          if (item.id == 2) {
+
+          function SubmitProduct(){
+
+            products.push(item)
+
+            if (item.id == product) {
+               localStorage.setItem( 'product', JSON.stringify(products))
+            }
+          }
+
+
+          if (item.id == product) {
+
+
             return (
               <>
                 <div className="img_product">
-                <Carousel>
-                  <Carousel.Item interval={10000}>
+
                     <img
                       className="d-block w-100"
-                      // {for (let index = 0; index < img.length; index++) {
-                      //   return image=img[index];
-                      // }}
                       src={img[1]}
                       alt="First slide"
                     />
-                  </Carousel.Item>
-                </Carousel>
+
                 </div>
                 <div className="product_detalhes">
                   <div className="product_title">
@@ -67,7 +80,8 @@ export function Product() {
                     <p>R${amount}</p>
                   </div>
 
-                  <Link to={`/cart/${id}`} className="button">Compra</Link>
+                  <a href="/cart" onClick={SubmitProduct} className="button">Compra</a>
+                  <a onClick={SubmitProduct} >Adicionar ao carrinho</a>
 
                 </div>
 
