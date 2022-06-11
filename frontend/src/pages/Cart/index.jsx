@@ -11,13 +11,13 @@ import api from '../../services/api'
 
 function Cart(props) {
   const [products, setProdutos] = useState([])
-  const [carts, setCarts] = useState([])
+  // const [carts, setCarts] = useState([])
   const [images, setImages] = useState([])
   const [selectImage, setSelectImage] = useState('')
   const [token, setToken] = useState(localStorage.getItem('token') || '')
 
   const [product, setProduct] = useState({})
-  
+
 
   const history = useHistory()
   useEffect(() => {
@@ -37,13 +37,26 @@ function Cart(props) {
 
   { token ? history.push('/cart') : history.push('/login') }
 
+  const carts = JSON.parse(localStorage.getItem("product"))
+  console.log(carts)
+
+
   return (
     <>
       <div className='cart-content'>
         <h2>Carinho de compras</h2>
         {carts.length > 0 ? (
           <div className='cart-itens'>
-
+            {carts.map((product) => {
+              return (
+                <>
+                  <p>{product.name}</p>
+                  <p>{product.price}</p>
+                  <p>{product.description}</p>
+                </>
+              )
+            })}
+          
           </div>
         ) : (
           <div className='cart-itens nothing'>

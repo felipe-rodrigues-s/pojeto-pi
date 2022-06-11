@@ -1,7 +1,7 @@
 import './styles.css'
 import { useEffect, useState } from 'react'
 import useFlashMessage from '../../hooks/useFlashMessage'
-import { useHistory } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 
 //api
@@ -64,7 +64,7 @@ function ProductDetails(props) {
             <div className='rigth'>
                 <h3>{product.name}</h3>
                 <h2>R$ {product.price}</h2>
-                <input className='buynow' type='button' value='Comprar agora' />
+                <Link to='/cart/'><input className='buynow' type='button' value='Comprar agora' /></Link>
                 <input onClick={handleAddToCart} className='addcart' type='button' value='Adcicionar ao carrinho' />
 
             </div>
