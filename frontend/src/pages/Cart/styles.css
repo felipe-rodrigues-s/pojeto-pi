@@ -21,6 +21,25 @@
 
 }
 
+.item_cart{
+    display: flex;
+    flex-direction: column
+    align
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .nothing {
     display: flex;
     flex-direction: column;

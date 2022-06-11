@@ -53,23 +53,14 @@ function Cart(props) {
               return (
                 <>
                   <div className="item_cart">
-                    <div className="item">
-                      <div className="description_item">
-                        <h1>{product.name}</h1>
-                        <span>{product.price}</span>
-                        <span>{product.description}</span>
-                      </div>
+                    <div className="description_item">
                       <div className="item_img">
                         <img src={'../../../../bacnkend/public/images/products/' + { images }} alt="Imagens dos produtos" />
                       </div>
-
-                      {/* <img src={product.images} alt="Imagens dos produtos"/> */}
-                      {/* {
-                        images.forEach(element => {
-                          <img src={`../../../../bacnkend/public/images/products/${{element}}`} alt="Imagens dos produtos"/>
-                          
-                        })
-                      } */}
+                      <div className="item">
+                        <h1>{product.name}</h1>
+                        <span>{product.price}</span>
+                      </div>
                     </div>
                     <button type="reset"><i><AiOutlineMinus /></i></button>
                   </div>
