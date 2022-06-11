@@ -23,7 +23,6 @@ router.post('/add', imageUpload.array('images'), productFormValidation, async (r
     const product = await builProduct.save()
     return res.status(201).json({ message: 'Prouct adicionado com sucesso!', product })
   } catch (error) {
-    console.log(error)
     return res.status(500).json({ message: 'Ocoreu um erro ao tentar pressistir os dados!', error })
   }
 })

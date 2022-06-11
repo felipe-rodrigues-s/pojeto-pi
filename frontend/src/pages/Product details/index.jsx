@@ -34,9 +34,9 @@ function ProductDetails(props) {
     let products = JSON.parse(localStorage.getItem("product"))|| []
     
     function  handleAddToCart() {
+        { token ? history.push('/cart') : history.push('/login') }
         products.push(product)   
         localStorage.setItem( 'product', JSON.stringify(products))
-        console.log(product)
     }
 
 

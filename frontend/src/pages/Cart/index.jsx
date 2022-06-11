@@ -2,7 +2,7 @@ import './styles.css'
 import { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
-import { AiOutlineMinus } from 'react-icons/ai'
+import { AiOutlineLine, AiOutlinePlus } from 'react-icons/ai'
 
 //components
 import CardContainer from '../../components/CardContainer'
@@ -16,9 +16,10 @@ function Cart(props) {
   const [images, setImages] = useState([])
   const [selectImage, setSelectImage] = useState('')
   const [token, setToken] = useState(localStorage.getItem('token') || '')
+  let total = 0
 
   const [product, setProduct] = useState({})
-
+  const carts = JSON.parse(localStorage.getItem("product"))
 
   const history = useHistory()
   useEffect(() => {
@@ -33,14 +34,15 @@ function Cart(props) {
       }
     })
       .then(response => console.log(response.data))
-
   }, [token])
+  for (let pr of carts) {
+    if (pr.price) {
+      total += pr.price
+    }
+  }
 
   { token ? history.push('/cart') : history.push('/login') }
 
-  console.log(product)
-
-  const carts = JSON.parse(localStorage.getItem("product"))
   return (
     <>
       <div className='cart-content'>
@@ -49,41 +51,38 @@ function Cart(props) {
           <div className='cart-itens'>
 
             {carts.map((product) => {
-              const { images } = product
-
               return (
                 <>
-                  <div className="item_cart">
-                    <div className="item_cart_img_price">
-                      <img src={`${process.env.REACT_APP_API}/images/products/${images}`} />
-                      <div className="item_cart_price">
-                        <span>Preço: {product.price}</span>
+                  {product.name && (
+                    <div className="item_cart">
+                      <div className="item_cart_img_price">
+                        <img src={`${process.env.REACT_APP_API}/images/products/${product.images}`} />
+                        <div className="item_cart_price">
+                          <span>Preço: R$ {product.price},00</span>
+                        </div>
+                      </div>
+                      <div className='item_cart_name'>
+                        <h3>{product.name}</h3>
+                      </div>
+                      <div className="add_remove">
+                        <AiOutlineLine />
+                        <AiOutlinePlus />
                       </div>
                     </div>
-                    <h2>{product.name}</h2>
-
-                    {/* <div className="description_item">
-                      <div className="item_img">
-                        <img src={`${process.env.REACT_APP_API}/images/products/${images}`} />
-                      </div>
-                      <div className="item">
-                        <h1>{product.name}</h1>
-                        <span>{product.price}</span>
-                      </div>
-                    </div>
-                    <button type="reset"><i><AiOutlineMinus /></i></button> */}
-                  </div>
+                  )}
                 </>
               )
             })}
-
           </div>
         ) : (
           <div className='cart-itens nothing'>
             <h1>Sem nenhum produto no carinho</h1>
           </div>
         )}
-
+      </div>
+      <div className="total_price">
+        <h3>Total: R$ {total},00 </h3>
+        <input type="button"  value="Finalizar compra"/>
       </div>
       <h4>Destaque</h4>
       {products.length == 0 ? (
