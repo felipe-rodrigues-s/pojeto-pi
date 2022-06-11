@@ -31,29 +31,12 @@ function ProductDetails(props) {
         setSelectImage(e.target.src)
     }
 
-    async function handleAddToCart() {
-        const { pathname } = window.location
-        const id = parseInt(pathname.split('/')[2])
-        let msgText = 'Cadastro realizado com sucesso!'
-        let msgType = 'success'
-
-        try {
-            const data = await api.post('/carts/add/' + id)
-            msgType = 'success'
-            msgText = data.data.message
-            history.push('/cart')
-        } catch (error) {
-            msgType = 'error'
-            msgText = error.response.data.message
-            console.log(error.response.data)
-        }
-
-        if (msgType != 'error') {
-            setFlashMessage(msgText, msgType)
-            history.push('/cart')
-        }
-        setFlashMessage(msgText, msgType)
-
+    let products = JSON.parse(localStorage.getItem("product"))|| []
+    
+    function  handleAddToCart() {
+        products.push(product)   
+        localStorage.setItem( 'product', JSON.stringify(products))
+        console.log(product)
     }
 
 

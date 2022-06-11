@@ -44,12 +44,17 @@ route.post('/add/:id', verifyToken, async (req, res) => {
   const user = await getUserByToken(token)
   const productId = req.params.id
 
+  // let products = JSON.parse(localStorage.getItem("product"))|| []
 
   //verificando se o producto existe
   const checkproduct = await Product.findByPk(productId)
   if (!checkproduct) return res.status(404).json({ message: 'Produto nao encontrado!' })
 
   try {
+
+    // localStorage.setItem('product', JSON.stringify(products))
+    // products.push(item)
+
     const buildCart = new Cart()
 
     const cart = await buildCart.save()
@@ -59,7 +64,6 @@ route.post('/add/:id', verifyToken, async (req, res) => {
 
     const buildCartProduct = new Cart_Product({ ProductId: parseInt(productId), CartId: parseInt(cart.id) })
     const cartProduct = await buildCartProduct.save()
-
 
     return res.status(201).json({ message: 'Producto adicionado ao carinho com sucesso!', cart, cartUser, cartProduct })
 
