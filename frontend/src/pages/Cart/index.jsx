@@ -2,6 +2,7 @@ import './styles.css'
 import { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
+import { AiOutlineMinus } from 'react-icons/ai'
 
 //components
 import CardContainer from '../../components/CardContainer'
@@ -38,25 +39,40 @@ function Cart(props) {
   { token ? history.push('/cart') : history.push('/login') }
 
   const carts = JSON.parse(localStorage.getItem("product"))
-  console.log(carts)
-
-
+console.log(carts)
   return (
     <>
       <div className='cart-content'>
         <h2>Carinho de compras</h2>
         {carts.length > 0 ? (
           <div className='cart-itens'>
+
             {carts.map((product) => {
+              const {images} =product
+              
               return (
                 <>
-                  <p>{product.name}</p>
-                  <p>{product.price}</p>
-                  <p>{product.description}</p>
+                  <div className="item_cart">
+                    <div className="item">
+                      <h1>{product.name}</h1>
+                      <span>{product.price}</span>
+                      <span>{product.description}</span>
+                      <img src={'../../../../bacnkend/public/images/products/' + {images}} alt="Imagens dos produtos"/>
+                      
+                      {/* <img src={product.images} alt="Imagens dos produtos"/> */}
+                      {/* {
+                        images.forEach(element => {
+                          <img src={`../../../../bacnkend/public/images/products/${{element}}`} alt="Imagens dos produtos"/>
+                          
+                        })
+                      } */}
+                    </div>
+                    <button type="reset"><i><AiOutlineMinus /></i></button>
+                  </div>
                 </>
               )
             })}
-          
+
           </div>
         ) : (
           <div className='cart-itens nothing'>
