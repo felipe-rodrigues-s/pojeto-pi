@@ -39,7 +39,7 @@ function Cart(props) {
   { token ? history.push('/cart') : history.push('/login') }
 
   const carts = JSON.parse(localStorage.getItem("product"))
-console.log(carts)
+  console.log(carts)
   return (
     <>
       <div className='cart-content'>
@@ -48,17 +48,21 @@ console.log(carts)
           <div className='cart-itens'>
 
             {carts.map((product) => {
-              const {images} =product
-              
+              const { images } = product
+
               return (
                 <>
                   <div className="item_cart">
                     <div className="item">
-                      <h1>{product.name}</h1>
-                      <span>{product.price}</span>
-                      <span>{product.description}</span>
-                      <img src={'../../../../bacnkend/public/images/products/' + {images}} alt="Imagens dos produtos"/>
-                      
+                      <div className="description_item">
+                        <h1>{product.name}</h1>
+                        <span>{product.price}</span>
+                        <span>{product.description}</span>
+                      </div>
+                      <div className="item_img">
+                        <img src={'../../../../bacnkend/public/images/products/' + { images }} alt="Imagens dos produtos" />
+                      </div>
+
                       {/* <img src={product.images} alt="Imagens dos produtos"/> */}
                       {/* {
                         images.forEach(element => {
