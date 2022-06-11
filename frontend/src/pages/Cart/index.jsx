@@ -38,8 +38,9 @@ function Cart(props) {
 
   { token ? history.push('/cart') : history.push('/login') }
 
+  console.log(product)
+
   const carts = JSON.parse(localStorage.getItem("product"))
-  console.log(carts)
   return (
     <>
       <div className='cart-content'>
@@ -53,16 +54,24 @@ function Cart(props) {
               return (
                 <>
                   <div className="item_cart">
-                    <div className="description_item">
+                    <div className="item_cart_img_price">
+                      <img src={`${process.env.REACT_APP_API}/images/products/${images}`} />
+                      <div className="item_cart_price">
+                        <span>Preço: {product.price}</span>
+                      </div>
+                    </div>
+                    <h2>{product.name}</h2>
+
+                    {/* <div className="description_item">
                       <div className="item_img">
-                        <img src={'../../../../bacnkend/public/images/products/' + { images }} alt="Imagens dos produtos" />
+                        <img src={`${process.env.REACT_APP_API}/images/products/${images}`} />
                       </div>
                       <div className="item">
                         <h1>{product.name}</h1>
                         <span>{product.price}</span>
                       </div>
                     </div>
-                    <button type="reset"><i><AiOutlineMinus /></i></button>
+                    <button type="reset"><i><AiOutlineMinus /></i></button> */}
                   </div>
                 </>
               )

@@ -18,15 +18,37 @@
 
     display: flex;
     flex-direction: column;
-
+    padding: 10px 10px;
+    overflow-y: auto;
 }
 
-.item_cart{
+.item_cart {
     display: flex;
-    flex-direction: column
-    align
+    justify-content: space-around;
+    border: 1px solid red;
+    margin: 10px 5px;
+    width: 100%;
+    border-radius: 8px;
+
 }
 
+.item_cart_price{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 5px;
+    width: 100%;
+
+}
+
+.item_cart_img_price{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 150px;
+    padding: 10px;
+}
 
 
 
