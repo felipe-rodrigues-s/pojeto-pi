@@ -34,8 +34,6 @@ route.get('/', verifyToken, async (req, res) => {
     listproducts.push(cartProduct)
   }
 
-  console.log(listproducts.length)
-
   return res.status(200).json({ message: 'ok' })
 })
 
@@ -68,7 +66,6 @@ route.post('/add/:id', verifyToken, async (req, res) => {
     return res.status(201).json({ message: 'Producto adicionado ao carinho com sucesso!', cart, cartUser, cartProduct })
 
   } catch (error) {
-    console.log(error)
     return res.status(500).json({ message: 'Ocorreu um erro ao tentar adicionar o produto no carrinho!' })
   }
 

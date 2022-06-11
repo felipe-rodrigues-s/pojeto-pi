@@ -24,8 +24,6 @@ function NavBar() {
             .then(response => setCategories(response.data.categories))
     }, [token])
 
-    console.log(categories)
-
     const { authenticated, logout } = useContext(Context)
     return (
         <nav className='header'>
