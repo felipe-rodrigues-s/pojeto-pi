@@ -36,7 +36,7 @@ route.get('/', verifyToken, async (req, res) => {
 
   console.log(listproducts.length)
 
-  return res.status(200).json({ message: 'ok', carts })
+  return res.status(200).json({ message: 'ok' })
 })
 
 route.post('/add/:id', verifyToken, async (req, res) => {

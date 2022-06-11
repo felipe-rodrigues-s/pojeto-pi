@@ -24,6 +24,7 @@ chrome-user-data
 *.swp
 .env.local
 *.swo
+./bacnkend/env
 public/images/products/*
 
 
