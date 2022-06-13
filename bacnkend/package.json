@@ -2,7 +2,7 @@
   "name": "backend",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "gervasioartur <gervasioartur@outlook.com.br>",
+  "author": "gervasioartur <gervasioartur@outlook.com.br> && Felipe <1felipersilva1@gmail.com>",
   "license": "MIT",
   "scripts": {
     "start": "node ./src/server.js ",
