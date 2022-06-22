@@ -43,6 +43,19 @@ function Cart(props) {
 
   { token ? history.push('/cart') : history.push('/login') }
 
+  const handleRemoveProduct = (id) => {
+    const elment = document.getElementById(id)
+    const aux =  carts
+    aux.slice(elment.id,1)
+
+//     const index = array.indexOf(5);
+// if (index > -1) {
+//   array.splice(index, 1); // 2nd parameter means remove one item only
+
+
+    console.log(aux)
+  }
+
   return (
     <>
       <div className='cart-content'>
@@ -50,7 +63,7 @@ function Cart(props) {
         {carts.length > 0 ? (
           <div className='cart-itens'>
 
-            {carts.map((product) => {
+            {carts.map((product,i) => {
               return (
                 <>
                   {product.name && (
@@ -65,7 +78,7 @@ function Cart(props) {
                         <h3>{product.name}</h3>
                       </div>
                       <div className="add_remove">
-                        <AiOutlineLine />
+                        <AiOutlineLine onClick={() => handleRemoveProduct(i)} id={i} />
                         <AiOutlinePlus />
                       </div>
                     </div>
@@ -82,7 +95,7 @@ function Cart(props) {
       </div>
       <div className="total_price">
         <h3>Total: R$ {total},00 </h3>
-        <input type="button"  value="Finalizar compra"/>
+        <input type="button" value="Finalizar compra" />
       </div>
       <h4>Destaque</h4>
       {products.length == 0 ? (
