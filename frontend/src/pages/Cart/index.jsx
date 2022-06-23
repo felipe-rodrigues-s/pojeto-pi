@@ -12,19 +12,16 @@ import api from '../../services/api'
 
 function Cart(props) {
   const [products, setProdutos] = useState([])
-  // const [carts, setCarts] = useState([])
   const [images, setImages] = useState([])
   const [selectImage, setSelectImage] = useState('')
   const [token, setToken] = useState(localStorage.getItem('token') || '')
   let total = 0
-
-  const [product, setProduct] = useState({})
+  const [count, setCount] = useState(JSON.parse(localStorage.getItem("product")) || {})
   let carts = JSON.parse(localStorage.getItem("product"))
 
   const history = useHistory()
   useEffect(() => {
     setToken(localStorage.getItem('token'))
-
     api.get('/products/')
       .then(response => setProdutos(response.data.products))
 
@@ -35,6 +32,7 @@ function Cart(props) {
     })
       .then(response => console.log(response.data))
   }, [token])
+
   for (let pr of carts) {
     if (pr.price) {
       total += pr.price
@@ -48,8 +46,11 @@ function Cart(props) {
     carts = carts.filter(function (value, index) {
       return index != elment.id;
     });
-    localStorage.setItem( 'product', JSON.stringify(carts))
+    localStorage.setItem('product', JSON.stringify(carts))
+    setCount(carts)
   }
+
+  console.log(count)
 
   return (
     <>
@@ -66,7 +67,7 @@ function Cart(props) {
                       <div className="item_cart_img_price">
                         <img src={`${process.env.REACT_APP_API}/images/products/${product.images}`} />
                         <div className="item_cart_price">
-                          <span>Preço: R$ {product.price},00</span>
+                          <span>Preço: R$ </span>
                         </div>
                       </div>
                       <div className='item_cart_name'>
