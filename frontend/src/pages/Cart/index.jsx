@@ -42,13 +42,14 @@ function Cart(props) {
     }
     setTotal(totalAux)
   }
+
   const handleRemoveProduct = (id) => {
     const elment = document.getElementById(id)
     let cartsAux = carts.filter(function (value, index) {
       return index != elment.id;
     });
     localStorage.setItem('product', JSON.stringify(cartsAux))
-    countTotal()
+    setTotal(countTotal())
     setCarts(cartsAux)
   }
 
