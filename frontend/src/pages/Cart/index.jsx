@@ -16,8 +16,7 @@ function Cart(props) {
   const [selectImage, setSelectImage] = useState('')
   const [token, setToken] = useState(localStorage.getItem('token') || '')
   let total = 0
-  const [count, setCount] = useState(JSON.parse(localStorage.getItem("product")) || {})
-  let carts = JSON.parse(localStorage.getItem("product"))
+  const [carts, setCarts] = useState(JSON.parse(localStorage.getItem("product")) || {})
 
   const history = useHistory()
   useEffect(() => {
@@ -43,14 +42,13 @@ function Cart(props) {
 
   const handleRemoveProduct = (id) => {
     const elment = document.getElementById(id)
-    carts = carts.filter(function (value, index) {
+    let cartsAux = carts.filter(function (value, index) {
       return index != elment.id;
     });
-    localStorage.setItem('product', JSON.stringify(carts))
-    setCount(carts)
+    localStorage.setItem('product', JSON.stringify(cartsAux))
+    setCarts(cartsAux)
   }
 
-  console.log(count)
 
   return (
     <>
