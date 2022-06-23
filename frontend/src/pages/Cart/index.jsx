@@ -19,7 +19,7 @@ function Cart(props) {
   let total = 0
 
   const [product, setProduct] = useState({})
-  const carts = JSON.parse(localStorage.getItem("product"))
+  let carts = JSON.parse(localStorage.getItem("product"))
 
   const history = useHistory()
   useEffect(() => {
@@ -45,15 +45,10 @@ function Cart(props) {
 
   const handleRemoveProduct = (id) => {
     const elment = document.getElementById(id)
-    const aux =  carts
-    aux.slice(elment.id,1)
-
-//     const index = array.indexOf(5);
-// if (index > -1) {
-//   array.splice(index, 1); // 2nd parameter means remove one item only
-
-
-    console.log(aux)
+    carts = carts.filter(function (value, index) {
+      return index != elment.id;
+    });
+    localStorage.setItem( 'product', JSON.stringify(carts))
   }
 
   return (
@@ -63,7 +58,7 @@ function Cart(props) {
         {carts.length > 0 ? (
           <div className='cart-itens'>
 
-            {carts.map((product,i) => {
+            {carts.map((product, i) => {
               return (
                 <>
                   {product.name && (
@@ -94,7 +89,7 @@ function Cart(props) {
         )}
       </div>
       <div className="total_price">
-        <h3>Total: R$ {total},00 </h3>
+        <h3>Total: R$ {total} </h3>
         <input type="button" value="Finalizar compra" />
       </div>
       <h4>Destaque</h4>
