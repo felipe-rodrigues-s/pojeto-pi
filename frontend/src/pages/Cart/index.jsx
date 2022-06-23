@@ -18,6 +18,8 @@ function Cart(props) {
 
   const history = useHistory()
   useEffect(() => {
+    group()
+    countTotal()
     setToken(localStorage.getItem('token'))
     api.get('/products/')
       .then(response => setProdutos(response.data.products))
@@ -28,7 +30,6 @@ function Cart(props) {
       }
     })
       .then(response => console.log(response.data))
-    countTotal()
   }, [token])
 
   { token ? history.push('/cart') : history.push('/login') }
@@ -40,8 +41,33 @@ function Cart(props) {
         totalAux += pr.price
       }
     }
+    totalAux = parseFloat(totalAux.toFixed(2));
     setTotal(totalAux)
   }
+
+  const group = () => {
+    function groupBy(array, key) {
+      return array.reduce((acc, item) => ({
+        ...acc,
+        [item[key]]: [...(acc[item[key]] ?? []), item],
+      }),
+        {})
+    }
+
+
+
+    const cartsGruped = groupBy(carts, 'id')
+    let cartsGrupedRemoveTrash = []
+
+    Object.keys(cartsGruped).forEach((item) => {
+      if (item != 'undefined') {
+        cartsGrupedRemoveTrash.push(cartsGruped[item])
+      }
+    });
+    setCarts(cartsGrupedRemoveTrash)
+  }
+
+  console.log(carts)
 
   const handleRemoveProduct = (id) => {
     const elment = document.getElementById(id)
