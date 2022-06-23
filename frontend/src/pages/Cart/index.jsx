@@ -18,7 +18,7 @@ function Cart(props) {
 
   const history = useHistory()
   useEffect(() => {
-    group()
+    // group()
     countTotal()
     setToken(localStorage.getItem('token'))
     api.get('/products/')
@@ -45,29 +45,29 @@ function Cart(props) {
     setTotal(totalAux)
   }
 
-  const group = () => {
-    function groupBy(array, key) {
-      return array.reduce((acc, item) => ({
-        ...acc,
-        [item[key]]: [...(acc[item[key]] ?? []), item],
-      }),
-        {})
-    }
+  // const group = () => {
+  //   function groupBy(array, key) {
+  //     return array.reduce((acc, item) => ({
+  //       ...acc,
+  //       [item[key]]: [...(acc[item[key]] ?? []), item],
+  //     }),
+  //       {})
+  //   }
 
 
 
-    const cartsGruped = groupBy(carts, 'id')
-    let cartsGrupedRemoveTrash = []
+  //   const cartsGruped = groupBy(carts, 'id')
+  //   let cartsGrupedRemoveTrash = []
 
-    Object.keys(cartsGruped).forEach((item) => {
-      if (item != 'undefined') {
-        cartsGrupedRemoveTrash.push(cartsGruped[item])
-      }
-    });
-    setCarts(cartsGrupedRemoveTrash)
-  }
+  //   Object.keys(cartsGruped).forEach((item) => {
+  //     if (item != 'undefined') {
+  //       cartsGrupedRemoveTrash.push(cartsGruped[item])
+  //     }
+  //   });
+  //   setCarts(cartsGrupedRemoveTrash)
+  // }
 
-  console.log(carts)
+  // console.log(carts)
 
   const handleRemoveProduct = (id) => {
     const elment = document.getElementById(id)

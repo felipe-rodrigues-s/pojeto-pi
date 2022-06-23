@@ -64,7 +64,7 @@ function ProductDetails(props) {
             <div className='rigth'>
                 <h3>{product.name}</h3>
                 <h2>R$ {product.price}</h2>
-                <Link to='/cart/'><input className='buynow' type='button' value='Comprar agora' /></Link>
+                <Link to='/cart/' onClick={handleAddToCart}><input className='buynow' type='button' value='Comprar agora' /></Link>
                 <input onClick={handleAddToCart} className='addcart' type='button' value='Adcicionar ao carrinho' />
 
             </div>
